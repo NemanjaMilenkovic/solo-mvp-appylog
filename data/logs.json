@@ -1,0 +1,26 @@
+[
+  {
+    "feeling": "Relaxed",
+    "sleep": 8,
+    "songOfTheDay": "Bruce Springsteen - Atlantic city",
+    "weather": "Sunny"
+  },
+  {
+    "feeling": "Happy",
+    "sleep": 6,
+    "songOfTheDay": "Bruce Springsteen - Trapped",
+    "weather": "Sunny"
+  },
+  {
+    "feeling": "Tired",
+    "sleep": 10,
+    "songOfTheDay": "Bruce Springsteen - Thunder road",
+    "weather": "Sunny"
+  },
+  {
+    "feeling": "Sad",
+    "sleep": 8,
+    "songOfTheDay": "Bruce Springsteen - For you",
+    "weather": "Sunny"
+  }
+]

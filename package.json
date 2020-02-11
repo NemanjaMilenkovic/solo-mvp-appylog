@@ -1,0 +1,22 @@
+{
+  "name": "solo-mvp-appylog",
+  "version": "1.0.0",
+  "description": "Solo MVP app that tracks how the user feels each day",
+  "main": "index.js",
+  "repository": "https://github.com/NemanjaMilenkovic/solo-mvp-appylog.git",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "NemanjaMilenkovic <nemanja.milenkovic@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.20.9",
+    "pg": "^7.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

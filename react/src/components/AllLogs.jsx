@@ -6,7 +6,13 @@ export default function AllLogs(props) {
   return (
     <ul className="list-group">
       {props.logs.map(item => (
-        <Log key={item.id} item={item.id} />
+        <Log
+          key={item.id}
+          id={item.id}
+          feeling={item.feeling}
+          weather={item.weather}
+          delete={props.delete}
+        />
       ))}
     </ul>
   );

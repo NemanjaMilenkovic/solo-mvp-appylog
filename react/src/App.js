@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState, useEffect } from "react";
+import appylogo from "./logo/appylog-o.svg";
+import Navigation from "./components/Navigation";
+import AllLogs from "./components/AllLogs";
+import "./App.css";
+import axios from "axios";
 
 function App() {
+  const [logs, setLogs] = useState([]);
+  useEffect(() => {
+    axios.get("/api/log").then(res => setLogs([...logs, ...res.data]));
+  }, []);
+  let body = "";
+  if (logs.length < 1) {
+    body = <img src={appylogo} className="App-logo" alt="logo" />;
+  } else {
+    body = <AllLogs logs={logs}></AllLogs>;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      {body}
+
+      <div className="container"></div>
     </div>
   );
 }

@@ -26,11 +26,28 @@ function App() {
     });
   }
   function addLog() {
+    document.getElementById("navbar").style.color = "green";
+    setTimeout(() => {
+      document.getElementById("navbar").style.color = "white";
+    }, 400);
     navAction == "+" ? setNavAction("-") : setNavAction("+");
 
     currentView == "ADD_LOG"
       ? setCurrentView("ALL_LOGS")
       : setCurrentView("ADD_LOG");
+  }
+
+  function submitNew() {
+    setLogs([
+      ...logs,
+      {
+        feeling: "Relaxed",
+        sleep: 3,
+        songOfTheDay: "Any",
+        weather: "Sunny"
+      }
+    ]);
+    setCurrentView("ALL_LOGS");
   }
 
   // useEffect(() => {
@@ -49,7 +66,7 @@ function App() {
   } else if (currentView == "ALL_LOGS") {
     body = <AllLogs logs={logs} delete={deleteLog}></AllLogs>;
   } else if (currentView == "ADD_LOG") {
-    body = <NewLog />;
+    body = <NewLog submitNew={submitNew} />;
   }
 
   return (

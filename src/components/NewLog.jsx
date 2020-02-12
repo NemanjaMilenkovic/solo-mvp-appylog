@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function NewLogForm() {
+export default function NewLogForm(props) {
   return (
     <div>
       <a href="alllogs">
@@ -70,7 +70,11 @@ export default function NewLogForm() {
         </div>
       </form>
 
-      <button type="submit" class="btn btn-primary center-block">
+      <button
+        type="submit"
+        class="btn btn-primary center-block"
+        onClick={() => props.submitNew()}
+      >
         <span class="badge badge-primary badge-pill">add new</span>
       </button>
     </div>

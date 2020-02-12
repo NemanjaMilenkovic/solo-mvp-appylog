@@ -7,9 +7,12 @@ export default function Log(props) {
       id={props.id}
       onClick={() => props.delete(props.id)}
     >
-      <p>
-        feeling: {props.feeling} and the weather is ☀️{props.weather}
-      </p>
+      <div>
+        <p>{props.date}</p>
+        <p>
+          <b>{props.feeling}</b> and the weather is <b>{props.weather}</b>
+        </p>
+      </div>
     </li>
   );
 }

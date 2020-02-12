@@ -50,6 +50,10 @@ function App() {
     setCurrentView("ALL_LOGS");
   }
 
+  function averageSleep(average) {
+    return average;
+  }
+
   // useEffect(() => {
   //   axios.post("/api/log").then(res => setLogs([...logs, ...res.data]));
   // }, []);
@@ -64,7 +68,9 @@ function App() {
   if (currentView == "LOADING") {
     body = <img src={appylogo} className="App-logo" alt="logo" />;
   } else if (currentView == "ALL_LOGS") {
-    body = <AllLogs logs={logs} delete={deleteLog}></AllLogs>;
+    body = (
+      <AllLogs logs={logs} delete={deleteLog} average={averageSleep}></AllLogs>
+    );
   } else if (currentView == "ADD_LOG") {
     body = <NewLog submitNew={submitNew} />;
   }

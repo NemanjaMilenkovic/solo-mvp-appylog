@@ -2,7 +2,7 @@ module.exports = {
   client: "postgresql",
   connection: {
     database: "appylog_mvp",
-    user: "milenkovic",
+    user: "postgres",
     password: "password"
   },
   pool: {

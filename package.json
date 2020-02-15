@@ -4,6 +4,7 @@
   "description": "Solo MVP app that tracks how the user feels each day",
   "main": "index.js",
   "repository": "https://github.com/NemanjaMilenkovic/solo-mvp-appylog.git",
+  "proxy": "http://localhost:4000",
   "scripts": {
     "dev": "nodemon index.js",
     "start": "react-scripts start",

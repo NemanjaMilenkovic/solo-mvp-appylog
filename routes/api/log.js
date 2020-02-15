@@ -36,6 +36,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
+  console.log("deleted--------->");
   const toDelete = {};
   db("logs")
     .where({ id: req.params.id })

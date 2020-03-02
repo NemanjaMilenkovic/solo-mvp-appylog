@@ -9,7 +9,7 @@ This was created during my time as a student at Code Chrysalis
 
 1. [What is appylog]
 
-   Appylog is meant to log important factors of ones daily routine and
+   Appylog is meant to log important factors of ones daily routine and analyze the effect of those factors on the mood and wellbeing
 
 1. [Setup]
 
